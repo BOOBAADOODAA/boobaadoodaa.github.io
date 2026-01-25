@@ -1,3 +1,4 @@
+//This Is a list of all the images that will be used in the quiz.
 const quiz_images = {
   "Buzzard2.jpg": "Common Buzzard",
   "barn.jpg": "Barn Owl",
@@ -22,11 +23,13 @@ const quiz_images = {
   "tawny.jpg": "tawny.jpg",
   "white.jpg": "white.jpg",
 };
+//This is a list of all the decoys that will be used in the quiz.
 const decoys = ["Morhen", "avocado"];
+//The document gets add event listener when the page is loaded.(Rephrase it)
 document.addEventListener("DOMContentLoaded", () => {
   const themeBtn = document.getElementById("theme-toggle");
   const startQuiz = document.getElementById("start-quiz");
-
+  //If theme button is still therere.
   if (themeBtn) {
     if (localStorage.getItem("savedtheme") === "darktheme") {
       document.body.classList.add("dark-mode");
@@ -51,6 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
         Object.keys(quiz_images)[qsetcopy[0]];
     });
     startQuiz.click();
-    q;
   }
 });
