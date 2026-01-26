@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dset.add(quiz_images[img]);
         const random_decoys = [...dset];
         const answer_buttons = question.querySelectorAll(".a");
-        question.querySelector(".quiz-img").src = `img/${quiz_images[img]}`;
+        question.querySelector(".quiz-img").src = `img/${img}`;
         for (let idx = 0; idx < 3; idx++) {
           answer_buttons[idx].value = random_decoys[idx];
         }
