@@ -23,3 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+//const means the refference is read only.
