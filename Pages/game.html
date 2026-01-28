@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="css/main.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <script src="js/theme.js" defer></script>
+        <script src="js/game.js" defer></script>
+        <title>UK Birds Of Prey - Guess the Bird</title>
+    </head>
+    <body>
+        <a href="#" id="theme-toggle">Switch Theme</a>
+        <section class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="buzzards-and-hawks.html">Broad winged raptors</a>
+                </li>
+                <li><a href="harriers.html">Harriers</a></li>
+                <li><a href="falcons.html">Falcons</a></li>
+                <li><a href="owls.html">Owls</a></li>
+                <li><a href="eagles.html">Eagles and ospreys</a></li>
+                <li><a class="active" href="game.html">Guess the Bird</a></li>
+            </ul>
+        </section>
+        <section class="bird">
+            <h1>Guess the Bird Game</h1>
+            <h4>Click the picture to Start The Quiz</h4>
+            <a href="#" id="start-quiz"><img src="img/game-link.jpg" /></a>
+            <section class="intstructions">
+                <h4>Instructions</h4>
+                <p>
+                    This is a simple multiple choice quiz. To play, click the
+                    question mark. You will get a picture and three options of
+                    what bird it will be. This will happen five times, and then
+                    you will get a score.
+                </p>
+            </section>
+            <template id="questions">
+                <fieldset>
+                    <img class="quiz-img" />
+                    <input type="button" class="a" value="a1" />
+                    <input type="button" class="a" value="a2" />
+                    <input type="button" class="a" value="a3" />
+                </fieldset>
+            </template>
+            <section class="quiz">
+                <h3>What Is This Bird?</h3>
+                <form id="quiz"></form>
+            </section>
+        </section>
+    </body>
+</html>
