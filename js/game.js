@@ -11,14 +11,14 @@ const quiz_images = {
   "kestrel.jpg": "Kestrel",
   "kite.jpg": "Red Kite",
   "leo.jpg": "Long Earded Owl",
-  "little.jpg": "little.jpg",
-  "marsh.jpg": "marsh.jpg",
-  "merlin.jpg": "merlin.jpg",
-  "montagu.jpg": "montagu.jpg",
-  "osprey.jpg": "osprey.jpg",
-  "owl-link.jpg": "owl-link.jpg",
-  "peregrine.jpg": "peregrine.jpg",
-  "seo.jpg": "seo.jpg",
+  "little.jpg": "Little Owl",
+  "marsh.jpg": "Marsh Harrier",
+  "merlin.jpg": "Merlin",
+  "montagu.jpg": "Montagu's Harrier",
+  "osprey.jpg": "Osprey",
+  "owl-link.jpg": "Barn Owl",
+  "peregrine.jpg": "Peregrine Falcon",
+  "seo.jpg": "Short Eared owl",
   "sparrow.jpg": "sparrow.jpg",
   "tawny.jpg": "tawny.jpg",
   "white.jpg": "white.jpg",
@@ -37,9 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
         qset.add(idx);
       }
       const quiz_form = document.getElementById("quiz");
+      quiz_form.replaceChildren();
       const question_template = document.getElementById("questions");
       for (const id of qset) {
         const question = question_template.content.cloneNode(true);
+        const stride = id * 5 + 1;
         const img = keys[id];
         const dset = new Set();
         while (dset.size < 2) {
@@ -51,7 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const answer_buttons = question.querySelectorAll(".a");
         question.querySelector(".quiz-img").src = `img/${img}`;
         for (let idx = 0; idx < 3; idx++) {
-          answer_buttons[idx].value = random_decoys[idx];
+          answer_buttons[idx].value = random_decoys[(idx + stride) % 3];
+          answer_buttons[idx].id = img;
+          answer_buttons[idx].addEventListener("click", (e) => {
+            if (quiz_images[e.target.id] == e.target.value) {
+              console.log("corect");
+            } else {
+              console.log("wrong");
+            }
+            e.target.closest("fieldset").disabled = true;
+          });
         }
         quiz_form.appendChild(question);
       }
