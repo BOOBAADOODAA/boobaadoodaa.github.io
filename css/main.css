@@ -215,3 +215,24 @@ section.quiz img {
     max-width: 480px;
     max-height: 430px;
 }
+
+@keyframes fadein {
+    from {
+    opacity: 0;
+    transform: scale(0.9);
+    }
+    to {
+    opacity: 1;
+    transform: scale(1);
+    }
+}
+
+section.bird {
+    animation: fadein 0.7s ease-out;
+}
+section.hidden {
+    display: none;
+}
+section.show {
+    display: block;
+}
