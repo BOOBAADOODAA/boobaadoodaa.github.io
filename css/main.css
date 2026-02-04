@@ -236,3 +236,6 @@ section.hidden {
 section.show {
     display: block;
 }
+section.intstructions p {
+    margin-left: 5em;
+}
