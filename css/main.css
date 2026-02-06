@@ -187,7 +187,7 @@ section.reserves {
 section.together {
     display: flex;
 }
-section.s_marsh {
+section.gallery {
     display: flex;
     flex-wrap: wrap;
 }
@@ -236,6 +236,22 @@ section.hidden {
 section.show {
     display: block;
 }
-section.intstructions p {
-    margin-left: 5em;
+section.intstructions {
+    margin-left: 40%;
+    width: 30em;
+}
+
+form#quiz>fieldset {
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+section.quizheadline {
+    margin-left: 13em;
+    margin-right: 13em;
+}
+section.quizheadline img {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }

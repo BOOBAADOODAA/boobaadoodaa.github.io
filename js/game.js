@@ -111,8 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const quiz_form = document.getElementById("quiz");
       quiz_form.replaceChildren();
       const question_template = document.getElementById("questions");
+      var answer_1 = true;
       for (const id of qset) {
         const question = question_template.content.cloneNode(true);
+        if (answer_1) {
+          question.querySelector("fieldset").disabled = false;
+          answer_1 = false;
+        }
         const stride = id * 5 + 1;
         const img = keys[id];
         const dset = new Set();
@@ -136,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const nextElementSibling =
               e.target.closest("fieldset").nextElementSibling;
             if (nextElementSibling) {
+              nextElementSibling.disabled = false;
               nextElementSibling.scrollIntoView({
                 behavior: "smooth",
               });
