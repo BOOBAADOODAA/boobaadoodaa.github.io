@@ -27,46 +27,52 @@
         </section>
         <section class="bird">
             <h1>Guess the Bird Game</h1>
-            <section class="together">
+            <section class="quizheadline">
                 <h4>Click the picture to Start The Quiz</h4>
-                <a href="#" id="start-quiz"><img src="img/game-link.jpg" /></a>
-                <section class="intstructions">
-                    <h4>Instructions</h4>
-                    <p>
-                        This is a simple multiple choice quiz. To play, click
-                        the question mark. You will get a picture and three
-                        options of what bird it will be. This will happen five
-                        times, and then you will get a score.
-                    </p>
+                <section class="together">
+                    <a href="#" id="start-quiz"
+                        ><img src="img/game-link.jpg"
+                    /></a>
+                    <section class="intstructions">
+                        <h4>Instructions</h4>
+                        <p>
+                            This is a simple multiple choice quiz. To play,
+                            click the question mark. You will get a picture and
+                            three options of what bird it will be. This will
+                            happen five times, and then you will get a score.
+                        </p>
+                    </section>
                 </section>
-            </section>
-            <template id="questions">
-                <fieldset>
-                    <img class="quiz-img" />
-                    <input type="button" class="a" value="a1" />
-                    <input type="button" class="a" value="a2" />
-                    <input type="button" class="a" value="a3" />
-                </fieldset>
-            </template>
-            <section class="quiz">
-                <h3>What Is This Bird?</h3>
-                <form id="quiz"></form>
-                <section class="t_response hidden" id="good">
-                    <p>
-                        Great Job! Your score was
-                        <label id="score_good"></label> out of 5. Click the
-                        button below if you would like to try again!
-                        <a href="game.html">Try again</a>
-                    </p>
-                </section>
-                <section class="t_response hidden" id="bad">
-                    <p>
-                        Nice try! Your score was
-                        <label id="score_bad"></label> out of 5. It looks like
-                        you need to revise a bit more, so click this button to
-                        see my other pages.
-                        <a href="index.html"> Revision</a>
-                    </p>
+                <template id="questions">
+                    <fieldset disabled>
+                        <img class="quiz-img" />
+                        <p>
+                            <input type="button" class="a" value="a1" />
+                            <input type="button" class="a" value="a2" />
+                            <input type="button" class="a" value="a3" />
+                        </p>
+                    </fieldset>
+                </template>
+                <section class="quiz">
+                    <h3>What Is This Bird?</h3>
+                    <form id="quiz"></form>
+                    <section class="t_response hidden" id="good">
+                        <p>
+                            Great Job! Your score was
+                            <label id="score_good"></label> out of 5. Click the
+                            button below if you would like to try again!
+                            <a href="game.html">Try again</a>
+                        </p>
+                    </section>
+                    <section class="t_response hidden" id="bad">
+                        <p>
+                            Nice try! Your score was
+                            <label id="score_bad"></label> out of 5. It looks
+                            like you need to revise a bit more, so click this
+                            button to see my other pages.
+                            <a href="index.html"> Revision</a>
+                        </p>
+                    </section>
                 </section>
             </section>
         </section>
