@@ -237,8 +237,8 @@ section.show {
     display: block;
 }
 section.intstructions {
-    margin-left: 40%;
-    width: 30em;
+    margin-left: 30%;
+    width: 40em;
 }
 
 form#quiz>fieldset {
